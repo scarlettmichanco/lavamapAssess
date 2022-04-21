@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+  <title>Lavamap Assessment</title>
+</head>
+<style>
+  HTML,body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #333;
+  }
+
+  #mainContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #appContainer {
+    height: 80vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #threeViewport {
+    flex: 3;
+    cursor: crosshair;
+  }
+
+  #sidePanel {
+    flex: 1;
+    background-color: #ddd;
+    margin-left: 1rem;
+  }
+
+  #swatchesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  #buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  #destroy {
+    margin-top: 1rem;
+  }
+
+  #movementContainer {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #upperMovementButtons {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin: auto;
+  }
+
+  #lowerMovementButtons {
+    display: flex;
+  }
+
+  #lowerMovementButtons > * {
+    flex: 1;
+  }
+
+  .swatch {
+    height: 12px;
+    width: 12px;
+    border: 1px solid #000;
+  }
+
+  .selected {
+    border: 1px solid #fff;
+  }
+
+</style>
+<body>
+  <div id='mainContainer'>
+    <div id='appContainer'>
+      <div tabindex="-1" id='threeViewport'>
+      </div>
+      <div id='sidePanel'>
+        <div id="swatchesContainer"></div>
+        <div id='buttonsContainer'>
+          <button id='reset'>Reset</button>
+          <div id="movementContainer">
+            <div id='upperMovementButtons'>
+              <button id='up'>UP</button>
+            </div>
+            <div id='lowerMovementButtons'>
+              <button id='left'>LEFT</button>
+              <button id='down'>DOWN</button>
+              <button id='right'>RIGHT</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+<script defer type='module' src='index.js'></script>
+</html>
